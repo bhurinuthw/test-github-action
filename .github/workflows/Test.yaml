@@ -1,5 +1,5 @@
 name: Test Github Action
-run-name: Manual ${{ inputs.deploy_target }} by @${{ github.actor }} for ${{ github.sha }}
+run-name: ${{ github.run_number }}.${{ github.run_attempt }} - ${{ github.event.head_commit.message }}
 
 on:
   push:
@@ -27,7 +27,7 @@ on:
         default: true
       environment:
         type: environment
-
+        description: UAT
 
 jobs:
   setup: 
