@@ -37,6 +37,7 @@ jobs:
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.event.inputs.commitHash }}
+          fetch-depth: 0
       - name: Run Information
         run: |
             echo ${{ github.event.inputs.choice1 }}
