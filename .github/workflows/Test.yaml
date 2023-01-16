@@ -1,5 +1,5 @@
 name: Test Github Action
-run-name: ${{ github.run_number }}.${{ github.run_attempt }} - ${{ github.event.head_commit.message }}
+run-name: ${{ github.run_number }}.${{ github.run_attempt }} - ${{ github.event.head_commit.message }}${{ github.event.inputs.commitHash }}
 
 on:
   push:
