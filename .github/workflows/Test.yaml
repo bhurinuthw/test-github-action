@@ -5,26 +5,27 @@ on:
     branches:
       - main
   workflow_dispatch:
-    choice1:
-      description: 'Test Radio Button'
-      required: false
-      default: 'warning' 
-      type: choice
-      options:
-      - info
-      - warning
-      - debug 
-    message1:
-      required: false
-      type: string
-      default: This Is a Test
-      description: None eiei
-    boolean1:
-      required: false
-      description: Test
-      default: true
-    environment:
-      type: environment
+    inputs:
+      choice1:
+        description: 'Test Radio Button'
+        required: false
+        default: 'warning' 
+        type: choice
+        options:
+        - info
+        - warning
+        - debug 
+      message1:
+        required: false
+        type: string
+        default: This Is a Test
+        description: None eiei
+      boolean1:
+        required: false
+        description: Test
+        default: true
+      environment:
+        type: environment
 
 
 jobs:
