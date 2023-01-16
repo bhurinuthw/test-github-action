@@ -1,0 +1,17 @@
+name: Test Github Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup: 
+    environment: UAT
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit Log
+        run: |
+            echo Hello World
+
