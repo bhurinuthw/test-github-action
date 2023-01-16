@@ -1,4 +1,5 @@
 name: Test Github Action
+run-name: Manual ${{ inputs.deploy_target }} by @${{ github.actor }} for ${{ github.sha }}
 
 on:
   push:
