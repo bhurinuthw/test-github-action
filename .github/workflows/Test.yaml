@@ -15,11 +15,11 @@ on:
         - info
         - warning
         - debug 
-      message1:
+      commitHash:
         required: false
         type: string
         description: Git Reference
-      commitHash:
+      boolean1:
         required: false
         type: boolean
         description: Test
@@ -41,7 +41,7 @@ jobs:
       - name: Run Information
         run: |
             echo ${{ github.event.inputs.choice1 }}
-            echo ${{ github.event.inputs.message1 }}
+            echo ${{ github.event.inputs.boolean1 }}
             echo ${{ github.event.inputs.commitHash }}
             echo ${{ github.event.inputs.environment1 }}
 
