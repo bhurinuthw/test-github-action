@@ -1,9 +1,32 @@
 name: Test Github Action
+run
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    choice1:
+      description: 'Test Radio Button'
+      required: false
+      default: 'warning' 
+      type: choice
+      options:
+      - info
+      - warning
+      - debug 
+    message1:
+      required: false
+      type: string
+      default: This Is a Test
+      description: None eiei
+    boolean1:
+      required: false
+      description: Test
+      default: true
+    environment:
+      type: environment
+
 
 jobs:
   setup: 
@@ -11,7 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Audit Log
+      - name: Run Information
         run: |
-            echo Hello World
+            echo ${{ github.event.inputs.choice1 }}
+            echo ${{ github.event.inputs.message1 }}
+            echo ${{ github.event.inputs.boolean1 }}
+            echo ${{ github.event.inputs.environment1 }}
 
