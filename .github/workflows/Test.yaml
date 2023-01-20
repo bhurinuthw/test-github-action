@@ -45,6 +45,3 @@ jobs:
             echo ${{ github.event.inputs.boolean1 }}
             echo ${{ github.event.inputs.commitHash }}
             echo ${{ github.event.inputs.environment1 }}
-
-#I AM A FAKE COMMIT!
-#I AM A FAKE COMMIT V2
