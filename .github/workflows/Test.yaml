@@ -46,3 +46,4 @@ jobs:
             echo ${{ github.event.inputs.commitHash }}
             echo ${{ github.event.inputs.environment1 }}
 # THIS IS DARKY!
+#I AM STINKY
